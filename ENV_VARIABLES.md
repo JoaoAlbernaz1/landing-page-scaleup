@@ -7,7 +7,7 @@ Este projeto requer as seguintes variáveis de ambiente para funcionar corretame
 ### `NEXT_PUBLIC_N8N_WEBHOOK_URL`
 - **Descrição**: URL do webhook do n8n para receber os dados do formulário de diagnóstico
 - **Formato**: URL completa (ex: `https://seu-n8n-instance.com/webhook/diagnostico`)
-- **Exemplo**: `https://n8n.exemplo.com/webhook/diagnostico`
+- **Valor atual**: `https://selens.app.n8n.cloud/webhook-test/scaleup-leads`
 
 ### `NEXT_PUBLIC_WHATSAPP_NUMBER`
 - **Descrição**: Número do WhatsApp para contato (usado na página de agradecimento)
