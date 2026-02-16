@@ -128,7 +128,9 @@ export function DiagnosticoEscalaForm({ utms }: DiagnosticoEscalaFormProps) {
       const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL
 
       if (!webhookUrl) {
-        throw new Error("Webhook URL não configurada")
+        throw new Error(
+          "Webhook URL não configurada. Configure NEXT_PUBLIC_N8N_WEBHOOK_URL nas variáveis de ambiente da Vercel."
+        )
       }
 
       const payload: DiagnosticoPayload = {
