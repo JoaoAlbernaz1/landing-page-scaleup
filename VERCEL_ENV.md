@@ -8,7 +8,7 @@
 
 ### Variável 1:
 - **Nome**: `NEXT_PUBLIC_N8N_WEBHOOK_URL`
-- **Valor**: `https://selens.app.n8n.cloud/webhook-test/scaleup-leads`
+- **Valor**: `https://selens.app.n8n.cloud/webhook/scaleup-leads`
 - **Environment**: Production, Preview, Development (marque todas)
 
 ### Variável 2:
@@ -20,4 +20,4 @@
 5. Faça um novo deploy (ou aguarde o próximo deploy automático)
 
 ## Webhook Configurado:
-✅ `https://selens.app.n8n.cloud/webhook-test/scaleup-leads`
+✅ `https://selens.app.n8n.cloud/webhook/scaleup-leads`

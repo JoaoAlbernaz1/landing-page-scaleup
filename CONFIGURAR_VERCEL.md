@@ -16,7 +16,7 @@ NEXT_PUBLIC_N8N_WEBHOOK_URL
 
 **Valor:**
 ```
-https://selens.app.n8n.cloud/webhook-test/scaleup-leads
+https://selens.app.n8n.cloud/webhook/scaleup-leads
 ```
 
 **Environments:**
