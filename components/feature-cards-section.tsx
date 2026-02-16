@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { ChevronRight, ArrowRight, Zap, ShoppingCart, BarChart3 } from "lucide-react"
-import { WHATSAPP_LINK } from "@/lib/links"
 
 const featureCards = [
   {
@@ -51,12 +50,10 @@ export function FeatureCardsSection() {
               <p className="text-muted-foreground leading-relaxed">
                 Se você ainda não tem loja, a gente cria e coloca no ar. Se você já tem, a gente arruma o que trava o crescimento e implementa automações para vender mais sem virar refém da operação.{" "}
                 <a
-                  href={WHATSAPP_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/diagnostico"
                   className="text-neon inline-flex items-center gap-1 hover:underline"
                 >
-                  Falar no WhatsApp <ChevronRight className="w-4 h-4" />
+                  Agendar consultoria <ChevronRight className="w-4 h-4" />
                 </a>
               </p>
             </motion.div>

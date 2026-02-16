@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 import { ChevronRight, Repeat, Mail, MessageSquare, ShoppingCart, TrendingUp } from "lucide-react"
-import { WHATSAPP_LINK } from "@/lib/links"
 
 const automations = [
   {
@@ -73,16 +72,14 @@ export function AISection() {
           </motion.p>
 
           <motion.a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/diagnostico"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-neon/10 text-neon rounded-lg border border-neon/20 hover:bg-neon/20 transition-colors text-sm font-medium mb-16"
           >
-            Falar no WhatsApp
+            Agendar consultoria
             <ChevronRight className="w-4 h-4" />
           </motion.a>
 
