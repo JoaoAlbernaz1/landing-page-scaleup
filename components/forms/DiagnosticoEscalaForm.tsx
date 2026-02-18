@@ -196,7 +196,12 @@ export function DiagnosticoEscalaForm({ utms }: DiagnosticoEscalaFormProps) {
         console.error("Erro ao enviar evento para Meta Pixel/CAPI:", trackingError)
       }
 
-      setIsSuccess(true)
+      // Redireciona para página de obrigado
+      if (typeof window !== "undefined") {
+        window.location.href = "/diagnostico/obrigado"
+      } else {
+        setIsSuccess(true)
+      }
     } catch (error) {
       console.error("Erro ao enviar formulário:", error)
       setSubmitError(
