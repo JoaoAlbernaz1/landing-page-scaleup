@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { v4 as uuidv4 } from "uuid"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
@@ -170,6 +171,29 @@ export function DiagnosticoEscalaForm({ utms }: DiagnosticoEscalaFormProps) {
 
       if (!response.ok) {
         throw new Error("Erro ao enviar formulário")
+      }
+
+      // Dispara evento para Pixel (client-side) e CAPI (server-side)
+      try {
+        const eventId = uuidv4()
+
+        if (typeof window !== "undefined" && (window as any).fbq) {
+          ;(window as any).fbq("track", "CompleteRegistration", {}, { eventID: eventId })
+        }
+
+        await fetch("/api/fb-events", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            event_name: "CompleteRegistration",
+            event_id: eventId,
+            user_data: {
+              ph: [data.whatsapp],
+            },
+          }),
+        })
+      } catch (trackingError) {
+        console.error("Erro ao enviar evento para Meta Pixel/CAPI:", trackingError)
       }
 
       setIsSuccess(true)
